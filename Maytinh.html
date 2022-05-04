@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css">
+    <title>Máy tính</title>
+
+</head>
+<body>
+      <div class="calculator">
+          <form>
+          <div class="result">
+              <input type="text">
+          </div>
+          <div>
+              <input type="button" value="1" onclick="clickNumber(1)">
+              <input type="button" value="2" onclick="clickNumber(2)">
+              <input type="button" value="3" onclick="clickNumber(3)">
+              <input type="button" value="+" onclick="clickNumber('+')">
+
+
+            <div class="row">
+              <input type="button" value="4" onclick="clickNumber(4)">
+              <input type="button" value="5" onclick="clickNumber(5)">
+              <input type="button" value="6" onclick="clickNumber(6)">
+              <input type="button" value="-" onclick="clickNumber('-')">
+            </div>
+              <div class="row">
+              <input type="button" value="7" onclick="clickNumber(7)">
+              <input type="button" value="8" onclick="clickNumber(8)">
+              <input type="button" value="9" onclick="clickNumber(9)">
+              <input type="button" value="*" onclick="clickNumber('*')">
+              </div>
+              <div class="row">
+              <input type="button" value="C" onclick="clearDisplay()">
+              <input type="button" value="0" onclick="clickNumber(0)">
+              <input type="button" value="=" onclick="bang()"></td>
+              <input type="button" value="/" onclick="clickNumber('/')">
+               </div>
+
+              </form>
+          </div>
+      </div>
+</body>
+</html>
+<script>
+    function clickNumber(number) {
+        document.getElementById('display').value += number
+    }
+
+    function clearDisplay() {
+        document.getElementById('display').value =  '';
+    }
+
+    function bang() {
+        let value = document.getElementById('display').value;
+        document.getElementById('display').value = eval(value);
+    }
+
+</script>
